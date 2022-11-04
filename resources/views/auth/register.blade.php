@@ -32,7 +32,8 @@
             <h2 class="mt-2 text-2xl font-bold text-gray-900 sm:mt-6 sm:text-3xl">Create your account</h2>
         </div>
         <div class="mx-auto mt-6 w-full max-w-md rounded-xl bg-white/80 p-6 shadow-xl backdrop-blur-xl sm:mt-10 sm:p-10">
-            <form action="#" autocomplete="off" class="space-y-6">
+            <form action="{{ route('register') }}" method="post" novalidate autocomplete="off" class="space-y-6">
+                @csrf
                 <div>
                     <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
                     <div class="relative mt-1 rounded-md shadow-sm">
@@ -87,7 +88,7 @@
                     </div>
                 </div>
                 <div>
-                    <a href="{{ route('dashboard') }}" class="flex items-center justify-center rounded-md bg-green-600 py-2 px-4 font-semibold text-white shadow-lg transition duration-150 ease-in-out hover:bg-green-700 hover:shadow-xl focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">Sign Up</a>
+                    <button type="submit" class="w-full flex items-center justify-center rounded-md bg-green-600 py-2 px-4 font-semibold text-white shadow-lg transition duration-150 ease-in-out hover:bg-green-700 hover:shadow-xl focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">Sign Up</button>
                 </div>
             </form>
 
