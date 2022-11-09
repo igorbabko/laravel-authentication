@@ -129,7 +129,7 @@
             </form>
 
             <div class="mt-6 flex items-center justify-center">
-                <a href="login.html" class="text-sm font-medium text-green-600 hover:text-green-500">Already have an account?</a>
+                <a href="{{ route('login') }}" class="text-sm font-medium text-green-600 hover:text-green-500">Already have an account?</a>
             </div>
         </div>
     </main>

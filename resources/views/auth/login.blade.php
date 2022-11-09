@@ -79,6 +79,14 @@
                     @enderror
                 </div>
 
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center gap-2">
+                        <input type="checkbox" id="remember" name="remember" class="h-4 w-4 rounded border-gray-300 text-green-600 focus:ring-green-500" />
+                        <label for="remember" class="text-sm text-gray-900">Remember me</label>
+                    </div>
+                    <a href="forgot-password.html" class="text-sm font-medium text-green-600 hover:text-green-500">Forgot your password?</a>
+                </div>
+
                 <div>
                     <button type="submit" class="flex w-full items-center justify-center rounded-md bg-green-600 py-2 px-4 font-semibold text-white shadow-lg transition duration-150 ease-in-out hover:bg-green-700 hover:shadow-xl focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">Log In</button>
                 </div>
