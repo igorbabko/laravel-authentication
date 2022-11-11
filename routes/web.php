@@ -30,5 +30,6 @@ Route::get('/forgot-password', [ForgotPasswordController::class, 'create'])->mid
 Route::post('/forgot-password', [ForgotPasswordController::class, 'store'])->middleware('guest')->name('password.email');
 
 Route::get('/reset-password', [ResetPasswordController::class, 'create'])->middleware('guest')->name('password.reset');
+Route::post('/reset-password', [ResetPasswordController::class, 'store'])->middleware('guest')->name('password.update');
 
 Route::view('/dashboard', 'dashboard')->middleware('auth')->name('dashboard');
