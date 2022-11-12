@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,4 +35,10 @@ Route::post('/reset-password', [ResetPasswordController::class, 'store'])->middl
 
 Route::get('/email/verify', fn () => view('auth.verify-email'))->middleware('auth')->name('verification.notice');
 Route::get('/email/verify/{id}/{hash}', fn () => 'verify')->middleware(['auth', 'signed'])->name('verification.verify');
+Route::post('/email/verification-notification', function (Request $request) {
+    $request->user()->sendEmailVerificationNotification();
+
+    return back()->with('status', 'Verification link sent!');
+})->middleware('auth')->name('verification.send');
+
 Route::view('/dashboard', 'dashboard')->middleware(['auth', 'verified'])->name('dashboard');
