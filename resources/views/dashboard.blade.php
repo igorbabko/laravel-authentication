@@ -20,8 +20,9 @@
             </svg>
             <span class="text-xl font-black">Security</span>
         </a>
-        <div>
-            <form method="post" action="{{ route('logout') }}">
+        <div class="flex gap-2">
+            <a href="{{ route('profile') }}" class="rounded-md bg-green-600 py-2 px-4 font-semibold text-white shadow-lg transition duration-150 ease-in-out hover:bg-green-700 hover:shadow-xl focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">Profile</a>
+            <form method="post" action="{{ route('logout') }}" class="flex">
                 @csrf
 
                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();" class="rounded-md bg-gray-200 py-2 px-4 font-semibold text-gray-900 shadow-lg transition duration-150 ease-in-out hover:bg-gray-300 hover:shadow-xl focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2">Log Out</a>
