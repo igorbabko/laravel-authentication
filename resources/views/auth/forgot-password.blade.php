@@ -37,7 +37,7 @@
                     <h3 class="text-sm font-medium text-green-800">{{ session('status') }}</h3>
                 </div>
             @endif
-            <form action="{{ route('password.request') }}" method="post" novalidate autocomplete="off">
+            <form action="{{ route('password.request') }}" method="post" autocomplete="off">
                 @csrf
 
                 <div class="mb-6">

@@ -44,7 +44,7 @@
                     <h3 class="text-sm font-medium text-green-800">{{ session('status') }}</h3>
                 </div>
             @endif
-            <form action="{{ route('verification.send') }}" method="post" novalidate autocomplete="off">
+            <form action="{{ route('verification.send') }}" method="post" autocomplete="off">
                 @csrf
 
                 <div>

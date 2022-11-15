@@ -29,7 +29,7 @@
             <h2 class="mt-2 text-2xl font-bold text-gray-900 sm:mt-6 sm:text-3xl">Reset Password</h2>
         </div>
         <div class="mx-auto mt-6 w-full max-w-md rounded-xl bg-white/80 p-6 shadow-xl backdrop-blur-xl sm:mt-10 sm:p-10">
-            <form action="{{ route('password.update') }}" method="post" novalidate autocomplete="off">
+            <form action="{{ route('password.update') }}" method="post" autocomplete="off">
                 @csrf
 
                 <input type="hidden" name="token" value="{{ $request->token }}">
