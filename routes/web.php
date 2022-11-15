@@ -47,3 +47,4 @@ Route::view('/dashboard', 'dashboard')->middleware(['auth', 'verified'])->name('
 Route::get('/profile', fn () => 'protected area')->middleware(['auth', 'verified', 'password.confirm'])->name('profile');
 
 Route::get('/confirm-password', [PasswordConfirmationController::class, 'show'])->middleware('auth')->name('password.confirm');
+Route::post('/confirm-password', [PasswordConfirmationController::class, 'store'])->middleware('auth');
